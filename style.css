@@ -10,9 +10,39 @@
   color: white;
 }
 
+#nav-hvh:hover {
+  color: black;
+  background-color: rgb(246, 154, 35);
+}
+
 #ekrem-hvh:hover {
   transition: all 0.3s ease;
   scale: 1.1;
+}
+
+#youtube-sabit {
+    /* Konumlandırma: Ekranın sol altına sabitle */
+    position: fixed; 
+    bottom: 100px; /* Alttan 20 piksel yukarıda */
+    right: 75px;   /* Soldan 20 piksel içeride */
+    z-index: 1000; /* Diğer her şeyin üstünde görünmesini sağlar */
+
+    /* Geçiş efekti (İsteğe bağlı: Üzerine gelince güzel bir efekt verir) */
+    transition: transform 0.3s ease;
+}
+
+#youtube-sabit img {
+    /* Resmin boyutları */
+    width: 100px; /* Logo boyutunu buradan ayarlayabilirsin */
+    height: auto;
+    /* Yuvarlak ve hafif şeffaflık (isteğe bağlı) */
+    border-radius: 20px; 
+}
+
+/* Mouse imleci üzerine geldiğinde (Hover) efekt ekleme (İsteğe bağlı) */
+#youtube-sabit:hover {
+    transform: scale(1.1); /* Logoyu %10 büyüt */
+    opacity: 1; /* Şeffaflığı kaldır */
 }
 
 .card {
@@ -115,3 +145,8 @@
   scale: 1.2;
   color: blue;
 }
+
+.copyright-container {
+    background-color: black;
+}
+
