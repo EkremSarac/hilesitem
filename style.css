@@ -29,6 +29,24 @@
 
     /* Geçiş efekti (İsteğe bağlı: Üzerine gelince güzel bir efekt verir) */
     transition: transform 0.3s ease;
+    box-shadow: 0 0.7em 1.7em -0.5em #e40000;
+    border-radius: 40px;
+}
+
+
+#youtube-sabit:hover {
+  box-shadow: 0 0.7em 1.7em -0.5em #fc01c6;
+}
+
+#yutub-video {
+  border-radius: 30px;
+  box-shadow: 0 0.5em 1.5em -0.5em #dd02e4;
+}
+
+#yutub-video:hover{
+  transition: all 0.3s ease;
+  scale: 1.1;
+  box-shadow: 0 0.7em 1.7em -0.5em #bf5800;
 }
 
 #youtube-sabit img {
