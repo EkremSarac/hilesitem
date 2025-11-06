@@ -21,46 +21,44 @@
 }
 
 #youtube-sabit {
-    /* Konumlandırma: Ekranın sol altına sabitle */
-    position: fixed; 
-    bottom: 100px; /* Alttan 20 piksel yukarıda */
-    right: 75px;   /* Soldan 20 piksel içeride */
-    z-index: 1000; /* Diğer her şeyin üstünde görünmesini sağlar */
+  /* Konumlandırma: Ekranın sol altına sabitle */
+  position: fixed;
+  bottom: 100px; /* Alttan 20 piksel yukarıda */
+  right: 75px; /* Soldan 20 piksel içeride */
+  z-index: 1000; /* Diğer her şeyin üstünde görünmesini sağlar */
 
-    /* Geçiş efekti (İsteğe bağlı: Üzerine gelince güzel bir efekt verir) */
-    transition: transform 0.3s ease;
-    box-shadow: 0 0.7em 1.7em -0.5em #e40000;
-    border-radius: 40px;
+  /* Geçiş efekti (İsteğe bağlı: Üzerine gelince güzel bir efekt verir) */
+  transition: transform 0.3s ease;
+  box-shadow: 0 0.7em 1.7em -0.5em #e40000;
+  border-radius: 40px;
 }
 
-
 #youtube-sabit:hover {
-  box-shadow: 0 0.7em 1.7em -0.5em #fc01c6;
+  box-shadow: 0 0.7em 1.7em -0.5em #ffffff;
 }
 
 #yutub-video {
   border-radius: 30px;
-  box-shadow: 0 0.5em 1.5em -0.5em #dd02e4;
+  box-shadow: 0 0.5em 1.5em -0.5em #ff0202;
 }
 
-#yutub-video:hover{
+#yutub-video:hover {
   transition: all 0.3s ease;
-  scale: 1.1;
-  box-shadow: 0 0.7em 1.7em -0.5em #bf5800;
+  box-shadow: 0 0.7em 1.7em -0.5em #b500bf;
 }
 
 #youtube-sabit img {
-    /* Resmin boyutları */
-    width: 100px; /* Logo boyutunu buradan ayarlayabilirsin */
-    height: auto;
-    /* Yuvarlak ve hafif şeffaflık (isteğe bağlı) */
-    border-radius: 20px; 
+  /* Resmin boyutları */
+  width: 100px; /* Logo boyutunu buradan ayarlayabilirsin */
+  height: auto;
+  /* Yuvarlak ve hafif şeffaflık (isteğe bağlı) */
+  border-radius: 100px;
 }
 
 /* Mouse imleci üzerine geldiğinde (Hover) efekt ekleme (İsteğe bağlı) */
 #youtube-sabit:hover {
-    transform: scale(1.1); /* Logoyu %10 büyüt */
-    opacity: 1; /* Şeffaflığı kaldır */
+  transform: scale(1.1); /* Logoyu %10 büyüt */
+  opacity: 1; /* Şeffaflığı kaldır */
 }
 
 .card {
@@ -120,51 +118,280 @@
   color: rgba(0, 0, 0, 0.788);
 }
 
+.undetek-logo {
+  font-family: "Fredoka One", "Orbitron", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  background-image: linear-gradient(
+    90deg,
+    #9b2c6b 0%,
+    #b64f85 35%,
+    #d79bbd 65%,
+    #e6dbe6 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  cursor: context-menu;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-/* From Uiverse.io by adamgiebl */ 
+/* From Uiverse.io by adamgiebl */
 .cssbuttons-io-button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  gap: 10px;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 18px;
-  padding: 0.8em 1.5em 0.8em 1.2em;
-  color: white;
-  background: #ff7d00;
-  background: linear-gradient(0deg, rgba(255, 125, 0, 1) 0%, rgba(255, 95, 109, 1) 100%);
-  border: 2px solid #ff7d00;
-  border-radius: 20em;
+  padding: 0.9em 1.6em;
+  color: #ffffff;
+  background: linear-gradient(180deg, #ff7a7a 0%, #ff8a3d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 10px 22px rgba(255, 116, 62, 0.35);
+  transform: translateY(0);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
 .cssbuttons-io-button svg {
   margin-right: 8px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Arka plan videosu: tüm sayfada sabit ve içerik arkasında */
+.video-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: #000;
+}
+.video-section:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    #8b00003b,
+    #b222226c,
+    #dc143c81,
+    #ff30307a,
+    #ff66668e
+  );
+  mix-blend-mode: color;
+  pointer-events: none;
+  z-index: 1;
+}
+.video-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.3) contrast(1.05);
+  z-index: 0;
+}
+
 .cssbuttons-io-button:hover {
-  border-color: white;
-  box-shadow: 0 0.5em 1.5em -0.5em #bf5800;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), 0 14px 28px rgba(255, 116, 62, 0.45);
+  transform: translateY(-2px);
+  filter: saturate(1.05);
 }
 
 .cssbuttons-io-button:active {
-  box-shadow: 0 0.3em 1em -0.5em #bf5800;
+  transform: translateY(0);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 18px rgba(255, 116, 62, 0.28);
 }
 
-#lavuqs{
+/* download anchor wrapper - remove underline */
+#download-btn { text-decoration: none; }
+#download-btn:hover { text-decoration: none; }
+
+#lavuqs {
   font-family: "Qwitcher Grypen", cursive;
   font-weight: 600;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: rgb(173, 130, 61);
 }
 
 #lavuqs:hover {
   transition: all 0.3s ease;
-  scale: 1.2;
+  scale: 1.05;
   color: blue;
 }
 
 .copyright-container {
-    background-color: black;
+  background-color: black;
 }
 
+/* UNDTEK features table - clean, attention-grabbing */
+.features-table {
+  width: 100%;
+  max-width: 820px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto;
+  background: rgba(17, 17, 17, 0.65);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  color: #e9eef5;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* (PIN widget ve iframe stilleri kaldırıldı) */
+
+/* Notice callout */
+.notice-card {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(17, 17, 17, 0.65);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+  padding: 26px 28px;
+}
+.notice-title {
+  text-align: center;
+  margin: 0 0 14px 0;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  font-size: 1.8rem;
+  background-image: linear-gradient(90deg, #ff4d4d, #ff8a65);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.notice-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #e9eef5;
+}
+.notice-list li {
+  position: relative;
+  padding-left: 32px;
+}
+.notice-list li + li {
+  margin-top: 8px;
+}
+.notice-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #ff7a7a, #ffb199);
+  box-shadow: 0 0 0 4px rgba(255, 122, 122, 0.18);
+}
+.notice-muted {
+  color: #b9c1cc;
+}
+
+/* Responsive media card for video */
+.media-card{
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+  transform: translateY(0);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.media-card::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg,rgba(255,122,122,.5),rgba(255,138,101,.5));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: .35;
+  pointer-events: none;
+}
+.media-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+.ratio-16x9{ position: relative; width:100%; padding-top:56.25%; }
+.ratio-16x9 iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; transition: box-shadow .35s ease; }
+.media-card:hover .ratio-16x9 iframe{ transform: none; }
+.features-table thead th {
+  padding: 16px 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+  color: #dfe3ea;
+}
+.features-table tbody td {
+  padding: 16px 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.features-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.features-table td:nth-child(2) {
+  text-align: center;
+  width: 160px;
+}
+.status-ok {
+  display: inline-block;
+  min-width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 8px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.35);
+}
+.status-bad {
+  display: inline-block;
+  min-width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 8px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(239, 68, 68, 0.35);
+}
