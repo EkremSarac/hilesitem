@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
@@ -33,23 +34,25 @@
       <div class="container py-5">
         <div class="row py-5">
   <div class="col-6">
-    <iframe id="yutub-video" width="660" height="415"
-      src="https://www.youtube.com/embed/-l4YlPeUBOw?si=CXG8VO6xHsL_VS7i"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen></iframe>
+    <div class="media-card" data-aos="fade-up">
+      <div class="ratio-16x9">
+        <iframe id="yutub-video"
+          src="https://www.youtube.com/embed/-l4YlPeUBOw?si=CXG8VO6xHsL_VS7i"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
   <div class="col-6 d-flex justify-content-center align-items-center">
-    <span id="ichanger-text">
-      <img id="undetek-image" width="300px" src="data:image/png;base64,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" alt="">
-    </span>
+    <h1 class="undetek-logo m-0">UNDETEK !!</h1>
   </div>
 </div>
         <div class="row justify-content-center py-5">
-  <div class="col-md-8 py-5">
-    <table class="table table-bordered table-dark text-center">
+  <div class="col-12 py-5" data-aos="fade-up">
+    <table class="features-table mx-auto">
       <thead>
         <tr>
           <th>ÖZELLİK</th>
@@ -59,23 +62,23 @@
       <tbody>
         <tr>
           <td>WALLHACK</td>
-          <td>✅</td>
+          <td><span class="status-ok">✓</span></td>
         </tr>
         <tr>
           <td>AIMBOT</td>
-          <td>✅</td>
+          <td><span class="status-ok">✓</span></td>
         </tr>
         <tr>
           <td>Skin Changer</td>
-          <td>❌</td>
+          <td><span class="status-bad">✕</span></td>
         </tr>
         <tr>
           <td>VAC Bypass</td>
-          <td>✅</td>
+          <td><span class="status-ok">✓</span></td>
         </tr>
         <tr>
           <td>Kullanımı güvenli</td>
-          <td>✅</td>
+          <td><span class="status-ok">✓</span></td>
         </tr>
       </tbody>
     </table>
@@ -84,28 +87,19 @@
 <a href="https://www.youtube.com/@ekrem1666" target="_blank" id="youtube-sabit">
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAC7CAMAAACjH4DlAAAAkFBMVEX/AAD/////7u7/ERH/2dn/xMT/8vL/4OD/0dH/9fX/ysr/6Oj/+/v/+Pj/1dX/u7v/LS3/Wlr/IyP/YGD/s7P/bm7/f3//ZWX/sLD/p6f/ubn/Ozv/hYX/jo7/5OT/lZX/U1P/SUn/HBz/QkL/NDT/nZ3/d3f/i4v/qan/goL/SEj/amr/FRX/mJj/c3P/Jyc2Zzp8AAAHpklEQVR4nO2dZ2PiMAyGazJMFnsWEjaF0sL//3dNCdkJBEokpeb9fHeWn3OELUvyGwOQaVqWpmlqIMMwOOeyLDfqnhpyIM4doxb+UffvWZZpQpjp6u15/5SpGvx3fnpzNJ59TAfH/mHYbc8Xq8m61VlKbw/rq3NaT1aLebs7PBz6x8HU/h6P3hUXYkPmTk173hT+hkPlerO3+57225/rU+frDzP+i6TlqTVZtPsD+wyJq4A4tJpR723sfXeCNPliai0Oe3vT0x1Dves7K4zDXQizbXvVwZ7ovZLW8+HHSOfPwmHKo1m3chTSam1Ht5lcx2HsthPsaTxTp6luPYxjtMA2vwR19tfWSC6O2ge24aVp3rgXhzXDtrlUDZ27cChf2AaXrVlxHFof21gATTIXSAYOZ4ltKoyUQjgUbDPBNC6Ao4dtJKDsmzjesU0EVcqhJnA0sQ0EVvJ7iePg2OaBS7+Cw/wHJ7V7pebjEGG/kdQiF4dojsPTLg8HtmFIUrNx/N8j7HUNMnHUsM1CUy0Lh6iLI7Y8AhwatlGIUtM4RDqrJLVL4/hXIeI79ZnCIa4j/ZWRxCHytxL5WnwcQ2yLUDVM4hDZdbhK4DCw7UGWE8dRx7YHWc04jg22PciaxnFsse1B1iKOQ3BP+rZUozhMbHPQxaM4HGxr0NWM4hAzLBiVHcUxxrYGXf0oDtF/WN7e1lEcov+wuDIjOEjniMLICXGIHBj01QxxiHc1m9Y4xKFj20JAgxCHWEkd2VqEOGxsWwhoGeI4YNtCQSGONrYpFOQEOFbYplBQ3cehCZj0k5bi4wC7ciK9+d35OMDC6F8G4TSBDx+HDDWiVGMO2futvo8DLPgj/SaW6EQ9VdvHARb8kbw8mx1JH7LycYCV8lxwMHUKNeId6mgXHGD+TQqysJw51JjFVbvgAAsNSpGkNGUNNWpRGRccYHv0KA568WrnggNsjx7HwawB1MCFVL/gACv2SuBwdzyUDo/NCw6wAVM4XBdCp/BuRwAHoVyKmYfDAhswEwerEXEhHx4OuESobByuCyFR7L/3cICd4HJxuMcmAgeZvocDLi8sHwcz8V1I28MBV0d8BYd7kMEuPVt5OOCSO67iQHchLQ8HXP71DRyMvWMe/SUPxwhuwFs4AIMNGfJwwB2lCuBgxhHMnKQ8HHD/IUVwMNbASr7xcMBFt4vhcL0ZzkHGOuOA2yMXxYHUekg944D7WAvjcF0IwgWEccYBN/AdONzNMvjNMT/j6IKNdxcO+II0+YxjDjbenTiYCXuHWT/jgNsa34sD2IXoZxxw3+j9OBjTW2DmKWcccLueR3AA3mE2zzjg7n8ew8E0IBdSERyMOSAXEB4OuI/zYRyuCwH4pCuEw3UhpZv3XiUcTCv7cOXhOJU8Sqi/4WCMl+tCqoaDMaXMC4he5XAwtilvF1JFHCUW31QRx2t1RFSq76iaK339skRU+r6jWSUc5e9KK7RJ1wEOmpXBAXOiVaqBAyreoVQi3jGGiobpFQgOAsZK6+RDx6CRdO+e5RNsPOL3LJz2tRP0LZx3RwuXF078jlale2WNcYNvnnHAJTASz+9gZxxwfZCIZ/94OPZg41UiN4xWqhx65iCpRErEziodRi3NFjXreMJoJWEj56TPGaUUffSKhQOjU8BBoJ5l4OGA6xpGu9rpUguHX/xFoxbOZiRKA6lUSm48HHCNjmnX0Y4YflkxoSprBR0HqRp8+YIDzKvT7tDg9+9AalhBrX+HjwOsZIF0dxfJb3YDtmZJ9/45obVCItkZKmiU9Q01Ium+YUEbNbCAB+muckGTPbAznIuDk+05GLRgBHt/g3RHSvgGnSR9hq+gfatK2kwoBc19TWo7IhRxHwebY5tCQVqAg6y3B5TEAhwUN4nQWoU44C6e6OoY4ni9wOFFSi844GLpdDUKcajYthCQHuKAi5bSVS2C4/XyV+zlr9e7cN7v7OvVwIu2URyvNyVnURxgT5KQlRLF8fppib1Hy+bY5iDLj/FfcNC6HoTX5YfFxyH6Ia4fxyH6qWUXx6HSSbNAkR7HwebYBuHKTOAQ+1nJJUvgEDsCtE/iEHsjpqdwCP3qqJXCIfLXMmApHICl+OTUyMAhbsxjwTJwWF/YZmFJz8Ih7PKILI4oDrh0W1qSc3DAvVtDSXuWg0PIqMfSzMUB2OiFjGSWjwMsaY6MxuwKDsAyQRoasKs4BLtx6bMbOISKmqZopHEItD6SX0omDiYLkmY6Tk89CwdT4Z4owZPUyJh5Jg4RHEjGh5KPg0ypb0laZC6NfByMceyGCeVpouRNOh+Hu0K+/+OeXTrmrYwbOFzJNolmAU9Ta6uoVyd8HYcrk/e+u/8gEtLpbhTt1mRv4/Ch6O/2sf1ZPS6tRXc/0mXz9hzvwOFLqxmyMp59bNtr0ps1ad0e2Jte3ahZtyf1OI64VKehNHu778Fhvlq3Oks0QtLy1Josult7PHpXGsbjM/oTjqTctcPlRr2u9HabmT0dbI+Hw7A9/5z8svr6K6xlp7Vefc7b3eHhcNxO7c2up9TrDZk7hlrwW7ipp+LIlWlalqVpmurJcDjnsvxLrq7ruhJK9+VOU+bcMFRfmmZZ5rNmnasfzdBjP9ColkYAAAAASUVORK5CYII=" alt="YouTube Kanalımız">
 </a>
-    <div class="py-4 fs-2 text-center" style="color: rgb(222, 43, 43);">
-        KULLANMADAN ÖNCE MUTLAKA OKUYUN!
-    </div>
-    <div>
-        <ul style="
-  list-style-type: disc;
-  padding-left: 25px;
-  font-family: 'Manrope', sans-serif;
-  font-size: 18px;
-  line-height: 1.9;
-  color: #1e1e1e;
-  max-width: 900px;
-  margin: 0 auto;
-">
-  <li><strong>Hile undetedected bir hiledir prime hesaplarınızda kullanabilirsiniz</strong></li>
-  <li>Hilenin inject olabilmesi için cs2'nin açık olması gerekir</li>
-  <li>Antivirüs açıkken hile inject olmayabilir, antivirüsü kapatmanızı önermiyoruz ama injectionda hata olursa deneyiniz</li>
-</ul>
+    <div class="py-4">
+      <div class="notice-card" data-aos="fade-up">
+        <h2 class="notice-title">KULLANMADAN ÖNCE MUTLAKA OKUYUN!</h2>
+        <ul class="notice-list">
+          <li><strong>Hile undetected bir hiledir, prime hesaplarınızda kullanabilirsiniz.</strong></li>
+          <li>Inject işlemi için CS2'nin açık olması gerekir.</li>
+          <li>Antivirüs açıkken inject olmayabilir. Kapamanızı önermiyoruz, fakat hata alırsanız geçici olarak devre dışı bırakmayı deneyin.</li>
+        </ul>
+      </div>
     </div>
     </div>
     <div class="d-flex justify-content-center align-items-center py-5">
-      <a href="undetek-v10.6.zip">
+      <a id="download-btn" href="https://undetek.com/download/download.php">
         <button class="cssbuttons-io-button">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25">
     <path fill="none" d="M0 0h24v24H0z"></path>
@@ -115,15 +109,10 @@
 </button>
       </a>
     </div>
+    
     <div>
-        <a class="d-flex text-center justify-content-center py-5" style="text-decoration: none; font-size: 1.4rem; color: rgb(58, 43, 226);" href="https://undetek.com/free-cs2-cheats-download/">Undetek sitesi</a>
+        <a class="d-flex text-center justify-content-center d-inline py-5" style="text-decoration: none; font-size: 1.4rem; color: rgb(58, 43, 226);" href="https://undetek.com/free-cs2-cheats-download/">Undetek sitesi</a>
     </div>
-    <div class="container text-center text-white-50">
-    <small>© Ekrem Saraç 2025. All Rights Reserved.</small>
-    <div>
-      <a class="privacy" href=""><small><b><a href="https://www.youtube.com/@ekrem1666" style="color: red; text-decoration: none;">YOUTUBE</a></b></small></a>
-    </div>
-  </div>
   <script>
 
 var api= "cd5ed13f8fbe36a8b1e1b852caf77755f8ea776f";
@@ -132,6 +121,16 @@ var ct= "0";
 
 </script>
 
+
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>
+   AOS.init({
+     duration: 700,
+     once: true,
+     offset: 120,
+     easing: 'ease-out-cubic'
+   });
+ </script>
 <script src="//aylink.co/t89s3.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
@@ -140,5 +139,3 @@ var ct= "0";
     ></script>
   </body>
 </html>
-
-
